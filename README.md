@@ -1,4 +1,4 @@
-# amazon_review-utils
+# amazon-review-utils
 Utilities for preprocessing and analyzing [Amazon review data](http://jmcauley.ucsd.edu/data/amazon/).  Includes a Naive Bayes sentiment model.
 
 Dependencies: [nltk](http://www.nltk.org/), [WordNetLemmatizer](http://www.nltk.org/_modules/nltk/stem/wordnet.html), [numpy](http://www.numpy.org/).  To download the corpus used by WordNetLemmatizer, do this in python:
