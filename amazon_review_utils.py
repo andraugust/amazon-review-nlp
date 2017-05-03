@@ -26,8 +26,8 @@ def make_dataset(path):
 
 def read_data(path):
     '''
-    Extract rating and comment string from path
-    :param path:
+    Extract rating and comment string from path file.
+    :param path: string path to data file.
     :return: dict {'ratings': [list of ratings] and 'comments': [list of ratings]}
     '''
     D = {'ratings':[], 'comments':[]}
