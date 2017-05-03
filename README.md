@@ -52,6 +52,15 @@ print('class-normalized accuracy = %f' % cn_accuracy)
 print('confusion matrix = ')
 pp(C)
 ```
+```bash
+```
 
 Print word sentiment scores:
+```python
+sentiment_scores = M.dllikelihoods
+for w in sorted(sentiment_scores, key=sentiment_scores.get, reverse=True):
+    print(w, sentiment_scores[w])
+```
+```bash
+
 ```
