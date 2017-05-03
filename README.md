@@ -9,7 +9,7 @@ nltk.download("wordnet", "/path/to/save/nltk_data")
 ```
 
 
-# Usage example
+# Usage examples
 Make a stemmed and lemmatized bag-of-words dataset:
 
 ```python
@@ -67,5 +67,21 @@ for w in sorted(sentiment_scores, key=sentiment_scores.get, reverse=True):
     print(w, sentiment_scores[w])
 ```
 ```bash
-
+great 1.14444556944
+love 1.1016236715
+season 1.05951238149
+enjoy 0.930963929036
+series 0.911828128291
+...(omitted for brevity)...
+now 0.000457325680016
+a 0.000268640025982
+some -0.00413303350801
+where -0.00500446217099
+i -0.00869491592333
+...(omitted for brevity)...
+didnt -0.617309841741
+movie -0.68408527281
+why -0.730638527048
+no -0.754135658315
+bad -0.865642160456
 ```
