@@ -3,7 +3,7 @@ Utilities for preprocessing and analyzing [Amazon review data](http://jmcauley.u
 
 Dependencies: [nltk](http://www.nltk.org/), [WordNetLemmatizer](http://www.nltk.org/_modules/nltk/stem/wordnet.html), [numpy](http://www.numpy.org/).
 
-To download the WordNet corpus, do this in python:
+To download the corpus used by WordNetLemmatizer, do this in python:
 
 ```python
 import nltk
