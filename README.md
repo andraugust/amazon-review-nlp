@@ -16,10 +16,7 @@ Make a stemmed and lemmatized bag-of-words dataset:
 
 ```python
 import amazon_review_utils as azu
-
 D = azu.make_dataset('reviews_Amazon_Instant_Video_5.json.gz')
-
-# D = 
 ```
 
 Train a naive Bayes sentiment model.
@@ -29,7 +26,6 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 from sklearn.model_selection import train_test_split
 from pprint import pprint as pp
 import numpy as np
-
 
 data_path = './reviews_Amazon_Instant_Video_5.json.gz'
 D = azu.make_dataset(data_path)
@@ -44,8 +40,8 @@ M.fit(Xtr,ytr,verbose=True)
 yM = M.predict(Xte)
 ```
 
-Print model results
-```
+Print results
+```python
 ## print results
 # performance
 accuracy = accuracy_score(yte,yM)
@@ -57,9 +53,4 @@ cn_accuracy = (p0+p1)/2
 print('class-normalized accuracy = %f' % cn_accuracy)
 print('confusion matrix = ')
 pp(C)
-```
-
-
-
-
 ```
