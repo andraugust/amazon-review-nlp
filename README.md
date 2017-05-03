@@ -17,29 +17,30 @@ import amazon_review_utils as azu
 D = azu.make_dataset('reviews_Amazon_Instant_Video_5.json.gz')
 ```
 
-Train a naive Bayes sentiment model:
+Train a naive Bayes model and predict the sentiment of comments:
 ```python
 import amazon_review_utils as azu
 from sklearn.model_selection import train_test_split
 from pprint import pprint as pp
 import numpy as np
 
+# load and preprocess data
 data_path = './reviews_Amazon_Instant_Video_5.json.gz'
 D = azu.make_dataset(data_path)
+
 # define training and testing sets
 Xall = D['comments']
 yall = D['ratings']
 Xtr, Xte, ytr, yte = train_test_split(Xall, yall, test_size=0.33)
 
-## fit and test
+# fit and predict
 M = azu.NaiveBayes()
 M.fit(Xtr,ytr,verbose=True)
 yM = M.predict(Xte)
 ```
 
-Print results:
+Print classification accuracies:
 ```python
-## print results
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 print('accuracy = %f' % (accuracy_score(yte,yM)))
@@ -50,4 +51,7 @@ cn_accuracy = (p0+p1)/2
 print('class-normalized accuracy = %f' % cn_accuracy)
 print('confusion matrix = ')
 pp(C)
+```
+
+Print word sentiment scores:
 ```
